@@ -95,7 +95,7 @@ namespace MTaka
         {
             // 2D 物理.覆蓋方塊(座標,尺寸,角度,圖層)
             Collider2D hit = Physics2D.OverlapBox(transform.position + checkGroundOffset, checkGroundSize, 0, layerCanJump);
-            print($"<color=#f3d>碰到的物件：{hit?.gameObject.name}</color>");
+            // print($"<color=#f3d>碰到的物件：{hit?.gameObject.name}</color>");
             // 傳回是否有碰到物件
             return hit;
         }

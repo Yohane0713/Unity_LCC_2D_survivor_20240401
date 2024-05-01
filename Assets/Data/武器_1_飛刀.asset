@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd93c01c6d5946d40a425478c4fc01e8, type: 3}
+  m_Name: "\u6B66\u5668_1_\u98DB\u5200"
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 8392050836205214847, guid: 133cb4cd70b334e419746090905c0cbf, type: 3}
+  weaponLv: 2
+  weaponValues:
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 500
+    weaponAttack: 50
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
+    weaponInterva: 2.7
+    weaponSpeed: 600
+    weaponAttack: 100
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0.5, z: 0}
+    weaponInterva: 2.4
+    weaponSpeed: 700
+    weaponAttack: 150
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0.5, z: 0}
+    - {x: -1, y: 0.5, z: 0}
+    weaponInterva: 2.1
+    weaponSpeed: 800
+    weaponAttack: 200
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0.5, z: 0}
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 1, y: -0.5, z: 0}
+    weaponInterva: 1.8
+    weaponSpeed: 900
+    weaponAttack: 250
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0.5, z: 0}
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 1, y: -0.5, z: 0}
+    - {x: -1, y: -0.5, z: 0}
+    weaponInterva: 1.5
+    weaponSpeed: 1000
+    weaponAttack: 300
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0.5, z: 0}
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 1, y: -0.5, z: 0}
+    - {x: -1, y: -0.5, z: 0}
+    - {x: 1, y: -1, z: 0}
+    weaponInterva: 1.2
+    weaponSpeed: 1100
+    weaponAttack: 350
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0.5, z: 0}
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 1, y: -0.5, z: 0}
+    - {x: -1, y: -0.5, z: 0}
+    - {x: 1, y: -1, z: 0}
+    - {x: -1, y: -1, z: 0}
+    weaponInterva: 0.9
+    weaponSpeed: 1200
+    weaponAttack: 400
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0.5, z: 0}
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 1, y: -0.5, z: 0}
+    - {x: -1, y: -0.5, z: 0}
+    - {x: 1, y: -1, z: 0}
+    - {x: -1, y: -1, z: 0}
+    - {x: 1.5, y: -0.25, z: 0}
+    weaponInterva: 0.6
+    weaponSpeed: 1300
+    weaponAttack: 450
+  - weaponPoint:
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0.5, z: 0}
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 1, y: -0.5, z: 0}
+    - {x: -1, y: -0.5, z: 0}
+    - {x: 1, y: -1, z: 0}
+    - {x: -1, y: -1, z: 0}
+    - {x: 1.5, y: -0.25, z: 0}
+    - {x: -1.5, y: -0.25, z: 0}
+    weaponInterva: 0.3
+    weaponSpeed: 1400
+    weaponAttack: 500
