@@ -18,5 +18,15 @@ namespace MTaka
         public GameObject prefabExp;
         [Header("經驗值掉落機率"), Range(0, 1)]
         public float expProbability;
+        [Header("攻擊範圍"), Range(0, 10)]
+        public float attackRange;
+        [Header("攻擊前搖"), Range(0, 3)]
+        public float attackBefore;
+        [Header("攻擊後搖"), Range(0, 3)]
+        public float attackAfter;
+        [Header("攻擊區域尺寸")]
+        public Vector3 attackAreaSize = Vector3.one;
+        [Header("攻擊區域位移")]
+        public Vector3 attackAreaOffset;
     }
 }
