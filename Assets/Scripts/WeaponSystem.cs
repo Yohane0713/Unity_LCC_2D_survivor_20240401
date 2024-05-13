@@ -9,6 +9,8 @@ namespace MTaka
     {
         [SerializeField, Header("武器資料")]
         private DataWeapon dataWeapon;
+        [SerializeField, Header("玩家血量系統")]
+        private HpPlayer hpPlayer;
 
         /// <summary>
         /// 取得當前武器數值
@@ -34,6 +36,15 @@ namespace MTaka
             // SpawnWeapon(); //呼叫一次只能生成一個武器
             // 重複呼叫方法(方法名稱, 延遲時間, 重複頻率)
             InvokeRepeating("SpawnWeapon", 0, weaponCurrentLv.weaponInterva);
+
+            // 訂閱事件
+            hpPlayer.onDead += CloseWeaponSystem;
+        }
+
+        private void CloseWeaponSystem(object sender, System.EventArgs e)
+        {
+            // 取消重複呼叫方法
+            CancelInvoke("SpawnWeapon");
         }
 
         /// <summary>
@@ -74,6 +85,9 @@ namespace MTaka
                 // 獲得生成暫存武器 剛體 往前產生推力
                 tempWeapon.GetComponent<Rigidbody2D>().AddForce(
                     weaponCurrentLv.weaponSpeed * tempWeapon.transform.right);
+
+                // 暫存武器 的 武器攻擊力 = 當前武器等級的攻擊力
+                tempWeapon.GetComponent<Weapon>().attack = weaponCurrentLv.weaponAttack;
             }
         }
     }

@@ -24,6 +24,8 @@ namespace MTaka
         private Vector3 checkGroundSize = Vector3.one;
         [SerializeField, Header("可跳躍圖層")]
         private LayerMask layerCanJump;
+        [SerializeField, Header("玩家血量系統")]
+        private HpPlayer hpPlayer;
         #endregion
 
         #region 事件區域
@@ -41,7 +43,13 @@ namespace MTaka
         
         private void Awake()
         {
+            hpPlayer.onDead += CloseControlSystem;
+        }
 
+        private void CloseControlSystem(object sender, System.EventArgs e)
+        {
+            // 此元件關閉 (屬性面板上的勾勾)
+            enabled = false;
         }
 
         private void Update()

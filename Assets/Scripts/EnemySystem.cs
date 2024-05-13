@@ -128,6 +128,9 @@ namespace MTaka
             isAttacking = false;
         }
 
+        /// <summary>
+        /// 攻擊玩家
+        /// </summary>
         private void AttackPlayer()
         {
             Collider2D hit = Physics2D.OverlapBox(
@@ -135,7 +138,10 @@ namespace MTaka
                 transform.TransformDirection(data.attackAreaOffset),
                 data.attackAreaSize, 0, playerLayer);
 
+            // hit?.name 如果打到的不是空值 才取得name
             print($"<color=#f99>攻擊到的物件：{hit?.name}</color>");
+            // 擊中物件 的 玩家血量 的 受傷 (敵人資料的攻擊力)
+            hit?.GetComponent<HpPlayer>().Damage(data.attack);
         }
     }
 }

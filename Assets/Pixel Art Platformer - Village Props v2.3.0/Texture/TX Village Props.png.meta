@@ -2890,7 +2890,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_133
+      name: TresureBox1
       rect:
         serializedVersion: 2
         x: 30
@@ -2911,7 +2911,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_134
+      name: TresureBox2
       rect:
         serializedVersion: 2
         x: 94
@@ -3079,7 +3079,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_142
+      name: TresureBox3
       rect:
         serializedVersion: 2
         x: 32
@@ -3100,7 +3100,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_143
+      name: TresureBox4
       rect:
         serializedVersion: 2
         x: 94
@@ -3926,8 +3926,6 @@ TextureImporter:
       TX Village Props_130: 43947320
       TX Village Props_131: 666641067
       TX Village Props_132: -1122543110
-      TX Village Props_133: -1957194162
-      TX Village Props_134: 509839685
       TX Village Props_135: 730044517
       TX Village Props_136: -2129125431
       TX Village Props_137: -1275958305
@@ -3936,8 +3934,6 @@ TextureImporter:
       TX Village Props_14: -2075213150
       TX Village Props_140: 2113938753
       TX Village Props_141: 1615858788
-      TX Village Props_142: -1560643905
-      TX Village Props_143: -1211042215
       TX Village Props_144: 452042343
       TX Village Props_145: 1057312343
       TX Village Props_146: -535334614
@@ -4067,6 +4063,10 @@ TextureImporter:
       TX Village Props_97: 1123199160
       TX Village Props_98: 814904768
       TX Village Props_99: 868323278
+      TresureBox1: -1957194162
+      TresureBox2: 509839685
+      TresureBox3: -1560643905
+      TresureBox4: -1211042215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

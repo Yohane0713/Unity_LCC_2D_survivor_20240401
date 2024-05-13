@@ -34,7 +34,8 @@ namespace MTaka
             // 如果碰到的物件的名稱有 "武器" 這兩個字 就受傷
             if (collision.gameObject.name.Contains(weaponName)) 
             {
-                Damage(150);
+                // 造成武器攻擊力的傷害
+                Damage(collision.gameObject.GetComponent<Weapon>().attack);
             }
         }
 
@@ -48,6 +49,21 @@ namespace MTaka
 
             // 刪除此物件
             Destroy(gameObject);
+
+            DropExpObject();
+        }
+
+        /// <summary>
+        /// 掉落經驗值物件
+        /// </summary>
+        private void DropExpObject()
+        {
+            // 如果隨機值 < 掉落機率
+            if (Random.value < dataEnemy.expProbability)
+            {
+                // 生成 經驗值物件 在敵人身上
+                Instantiate(dataEnemy.prefabExp, transform.position, Quaternion.identity);
+            }
         }
     }
 }
