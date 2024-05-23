@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace MTaka
 {
@@ -18,11 +19,25 @@ namespace MTaka
 
         private Animator ani;
         private string parDead = "觸發死亡";
+        /// <summary>
+        /// 圖片血條
+        /// </summary>
+        private Image imgHp;
+        private float hpMax;
 
         private void Awake()
         {
             hp = dataPlayer.hp;
+            hpMax = hp;
             ani = GetComponent<Animator>();
+            // 用 GameObject.Find 搜尋場景物件時，場景上的物件名稱不能重複
+            imgHp = GameObject.Find("圖片血條").GetComponent<Image>();
+        }
+
+        public override void Damage(float damage)
+        {
+            base.Damage(damage);
+            imgHp.fillAmount = hp / hpMax;
         }
 
         protected override void Dead()

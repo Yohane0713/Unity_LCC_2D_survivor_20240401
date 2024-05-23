@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 7137989049069749800}
   - component: {fileID: 8333117040622322565}
   - component: {fileID: 3188663467068171297}
-  m_Layer: 0
+  - component: {fileID: 2416353150289207454}
+  - component: {fileID: 6872011344842365114}
+  m_Layer: 8
   m_Name: "\u6575\u4EBA2_\u54E5\u5E03\u6797"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,8 +101,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 60
+  m_LinearDrag: 1.2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -170,3 +172,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2416353150289207454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7534766463158162131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f5f5df295f77a4a8160317780cc1ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 32b375e2b00b39b4eb9788b68351105a, type: 2}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &6872011344842365114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7534766463158162131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8126205bfda4940bd24209fd6a3567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabDamageCanvas: {fileID: 894230096775537281, guid: 2ddc5e65cd8feb34e91de97c532ea939, type: 3}
+  dataEnemy: {fileID: 11400000, guid: 32b375e2b00b39b4eb9788b68351105a, type: 2}
+  prefabExplosion: {fileID: 7483884093440617020, guid: d75dcb53ed787ad48a2f15aec7bb8ffd, type: 3}

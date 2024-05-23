@@ -16,7 +16,7 @@ namespace MTaka
         /// <summary>
         /// 受傷
         /// </summary>
-        public void Damage(float damage)
+        public virtual void Damage(float damage)
         {
             // 如果血量 <= 0 就跳出
             if (hp <= 0) return;

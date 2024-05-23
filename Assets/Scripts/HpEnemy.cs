@@ -9,6 +9,8 @@ namespace MTaka
     {
         [SerializeField, Header("敵人資料")]
         private DataEnemy dataEnemy;
+        [SerializeField, Header("爆炸特效")]
+        private GameObject prefabExplosion;
 
         private string weaponName = "武器";
 
@@ -45,11 +47,11 @@ namespace MTaka
             // base 父類別原有的內容，可選擇刪除
             base.Dead();
 
-            print($"<color=#f66>生成爆炸特效</color>");
-
+            // print($"<color=#f66>生成爆炸特效</color>");
+            GameObject tempExplosion = Instantiate(prefabExplosion, transform.position, Quaternion.identity);
             // 刪除此物件
             Destroy(gameObject);
-
+            Destroy(tempExplosion, 1.5f);
             DropExpObject();
         }
 
