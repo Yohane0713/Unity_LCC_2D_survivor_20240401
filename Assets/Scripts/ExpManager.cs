@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace MTaka
 {
@@ -11,6 +12,11 @@ namespace MTaka
     {
         // 單例模式需要的靜態實體資料
         public static ExpManager instance;
+
+        /// <summary>
+        /// 升級事件
+        /// </summary>
+        public event EventHandler onUpgrade;
 
         [SerializeField, Header("圖片經驗值")]
         private Image imgExp;
@@ -33,6 +39,7 @@ namespace MTaka
         private int lv = 1;
 
         private int lvMax = 100;
+
 
         /// <summary>
         /// 經驗值需求表格：所有等級的經驗值需求
@@ -60,11 +67,20 @@ namespace MTaka
             UpdateUI();
         }
 
-        /// <summary>
-        /// 添加經驗值
-        /// </summary>
-        /// <param name="exp">要增加的經驗值</param>
-        public void AddExp(float exp)
+        private void Update()
+        {
+
+#if UNITY_EDITOR
+            // #if UNITY_EDITOR 如果在編輯器內，此程式區塊才有作用
+            TestAddExp();
+#endif        
+        }
+
+            /// <summary>
+            /// 添加經驗值
+            /// </summary>
+            /// <param name="exp">要增加的經驗值</param>
+            public void AddExp(float exp)
         {
             expCurrent += exp;
 
@@ -87,12 +103,25 @@ namespace MTaka
         }
 
         /// <summary>
-        /// 玩家升級
+        /// 升級
         /// </summary>
         private void Upgrade()
         {
             lv++;
             textLv.text = $"Lv{lv}";
+            onUpgrade?.Invoke(this, null);
+        }
+
+        /// <summary>
+        /// 測試：添加經驗值
+        /// </summary>
+        private void TestAddExp()
+        {
+            // 如果按下左邊鍵盤數字1 就添加 100經驗值
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                AddExp(100);
+            }
         }
     }
 }

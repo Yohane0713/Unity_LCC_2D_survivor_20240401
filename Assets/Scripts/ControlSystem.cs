@@ -6,10 +6,8 @@ namespace MTaka
     public class ControlSystem : MonoBehaviour
     {
         #region 資料區域
-        [SerializeField, Header("移動速度"), Range(0, 10)]
-        private float moveSpeed = 5.5f;
-        [SerializeField, Header("跳躍力道"), Range(0, 700)]
-        private float jump = 400;
+        [SerializeField, Header("玩家資料")]
+        private DataPlayer dataPlayer;
         [SerializeField, Header("剛體元件")]
         private Rigidbody2D r2D;
         [SerializeField, Header("動畫控制元件")]
@@ -89,10 +87,10 @@ namespace MTaka
         private void Move(float h)
         {
             // 剛體 的 加速度 = 新 二維向量(移動速度，原本剛體的 Y 軸加速度)
-            r2D.velocity = new Vector2(moveSpeed * h, r2D.velocity.y);
+            r2D.velocity = new Vector2(dataPlayer.moveSpeed * h, r2D.velocity.y);
 
             // 動畫 設定浮點數(參數名稱，浮點數)
-            ani.SetFloat(parMove, r2D.velocity.magnitude / moveSpeed);
+            ani.SetFloat(parMove, r2D.velocity.magnitude / dataPlayer.moveSpeed);
         }
 
         /// <summary>
@@ -117,7 +115,7 @@ namespace MTaka
             if (IsGround() && Input.GetKeyDown(KeyCode.Space))
             {
                 // 剛體的推力 (向上)
-                r2D.AddForce(new Vector2(0, jump));
+                r2D.AddForce(new Vector2(0, dataPlayer.jump));
                 // 動畫的設定觸發參數
                 ani.SetTrigger(parJump);
             }
