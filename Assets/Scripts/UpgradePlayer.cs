@@ -8,9 +8,14 @@ namespace MTaka
     public class UpgradePlayer : MonoBehaviour, IUpgrade
     {
         [SerializeField, Header("玩家資料")]
-        private DataPlayer dataPlayer;
+        protected DataPlayer dataPlayer;
 
-        public void Upgrade(float increase)
+        public virtual void InitializePlayerData(float value)
+        {
+
+        }
+
+        public virtual void Upgrade(float increase)
         {
             
         }

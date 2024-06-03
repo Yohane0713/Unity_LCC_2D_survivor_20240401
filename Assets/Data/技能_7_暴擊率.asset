@@ -17,3 +17,5 @@ MonoBehaviour:
   skillSprite: {fileID: 21300000, guid: 4637953d65a24364aab3372a525b9ed2, type: 3}
   skillUpgrade: "\u63D0\u534710%\u66B4\u64CA\u7387"
   skillDescription: "\u63D0\u5347\u6240\u6709\u6B66\u5668 10% \u66B4\u64CA\u7387\u3002"
+  skillInitilizeValue: 0
+  skillIncrease: 0.1

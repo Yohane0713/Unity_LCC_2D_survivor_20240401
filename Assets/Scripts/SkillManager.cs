@@ -45,6 +45,9 @@ namespace MTaka
         /// </summary>
         private int btnPlayerClickIndex;
 
+        [SerializeField, Header("升級系統：1 ~ 7")]
+        private GameObject[] goUpgradeSystem;
+
         private void Awake()
         {
             ExpManager.instance.onUpgrade += PlayerUpgrade;
@@ -156,8 +159,20 @@ namespace MTaka
             dataPlayerClick.skillLv++;
             UpdateSkillLvSprite(btnPlayerClickIndex, dataPlayerClick.skillLv);
             yield return new WaitForSecondsRealtime(0.5f);
+            UpgradeSkillObject(dataPlayerClick);
             yield return StartCoroutine(FadeGroupUpgrade(false)); // 等待淡出升級畫面完後才繼續執行
             Time.timeScale = 1;                                   // 然後，時間繼續進行
+        }
+
+        /// <summary>
+        /// 技能升級物件
+        /// </summary>
+        private void UpgradeSkillObject(DataSkill dataPlayerClick)
+        {
+            // 獲得玩家點擊技能的編號
+            int skillIndex = dataSkills.ToList().IndexOf(dataPlayerClick);
+            print($"<color=#36f>玩家點的技能資料編號：{skillIndex}</color>");
+            goUpgradeSystem[skillIndex].GetComponent<IUpgrade>().Upgrade(dataPlayerClick.skillIncrease);
         }
 
         /// <summary>
@@ -169,6 +184,18 @@ namespace MTaka
             {
                 dataSkills[i].skillLv = 1;
             }
+        }
+
+        /// <summary>
+        /// 初始化玩家資料
+        /// </summary>
+        private void InitializePlayerData()
+        {
+            goUpgradeSystem[0].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[0].skillInitilizeValue);
+            goUpgradeSystem[1].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[1].skillInitilizeValue);
+            goUpgradeSystem[2].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[2].skillInitilizeValue);
+            goUpgradeSystem[3].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[3].skillInitilizeValue);
+            goUpgradeSystem[6].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[6].skillInitilizeValue);
         }
     }
 }

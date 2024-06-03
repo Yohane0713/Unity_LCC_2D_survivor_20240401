@@ -90,5 +90,14 @@ namespace MTaka
                 tempWeapon.GetComponent<Weapon>().attack = weaponCurrentLv.weaponAttack;
             }
         }
+
+        /// <summary>
+        /// 重新開始生成武器：為了重置生成間隔
+        /// </summary>
+        public void RestartSpawnWeapon()
+        {
+            CancelInvoke("SpawnWeapon");
+            InvokeRepeating("SpawnWeapon", 0, weaponCurrentLv.weaponInterva);
+        }
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u6B66\u5668_1_\u98DB\u5200"
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 8392050836205214847, guid: 133cb4cd70b334e419746090905c0cbf, type: 3}
-  weaponLv: 1
+  weaponLv: 2
   weaponValues:
   - weaponPoint:
     - {x: 1, y: 0, z: 0}

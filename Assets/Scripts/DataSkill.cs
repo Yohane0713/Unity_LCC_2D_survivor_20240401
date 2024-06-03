@@ -18,5 +18,9 @@ namespace MTaka
         public string skillUpgrade;
         [Header("技能描述"), TextArea(2 , 5)]
         public string skillDescription;
+        [Header("技能初始值"), Range(0, 1500)]
+        public float skillInitilizeValue;
+        [Header("技能升級要增加的值"), Range(0, 10)]
+        public float skillIncrease;
     }
 }

@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd93c01c6d5946d40a425478c4fc01e8, type: 3}
   m_Name: "\u6B66\u5668_2_\u5F48\u8DF3\u6B66\u5668"
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 6499275492236179448, guid: 13d966b74a6577f4c8a021fab4991de6, type: 3}
   weaponLv: 1
+  weaponValues:
+  - weaponPoint:
+    - {x: 1, y: 1, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 30

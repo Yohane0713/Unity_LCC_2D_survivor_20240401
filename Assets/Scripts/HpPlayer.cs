@@ -47,5 +47,16 @@ namespace MTaka
             // 事件如果不為空值 就呼叫(發事件的此物件, 空值)
             onDead?.Invoke(this, null);
         }
+
+        /// <summary>
+        /// 重設血量並更新介面
+        /// </summary>
+        /// <param name="_hp">要重設的血量</param>
+        public void ResetHp(float _hp)
+        {
+            hp = _hp;
+            hpMax = _hp;
+            imgHp.fillAmount = 1;
+        }
     }
 }
