@@ -16,7 +16,76 @@ MonoBehaviour:
   weaponLv: 1
   weaponValues:
   - weaponPoint:
-    - {x: 1, y: 1, z: 0}
+    - {x: 1, y: 0.3, z: 0}
     weaponInterva: 3
     weaponSpeed: 300
     weaponAttack: 30
+  - weaponPoint:
+    - {x: 1, y: 0.3, z: 0}
+    - {x: -1, y: 0.3, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 60
+  - weaponPoint:
+    - {x: 1, y: 0.3, z: 0}
+    - {x: -1, y: 0.3, z: 0}
+    - {x: 0.5, y: 0.3, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 90
+  - weaponPoint:
+    - {x: 1, y: 0.3, z: 0}
+    - {x: -1, y: 0.3, z: 0}
+    - {x: 0.5, y: 0.3, z: 0}
+    - {x: -0.5, y: 0.3, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 120
+  - weaponPoint:
+    - {x: 1, y: 0.3, z: 0}
+    - {x: -1, y: 0.3, z: 0}
+    - {x: 0.5, y: 0.3, z: 0}
+    - {x: -0.5, y: 0.3, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 150
+  - weaponPoint:
+    - {x: 1, y: 0.3, z: 0}
+    - {x: -1, y: 0.3, z: 0}
+    - {x: 0.5, y: 0.3, z: 0}
+    - {x: -0.5, y: 0.3, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 300
+  - weaponPoint:
+    - {x: 1, y: 0.3, z: 0}
+    - {x: -1, y: 0.3, z: 0}
+    - {x: 0.5, y: 0.3, z: 0}
+    - {x: -0.5, y: 0.3, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 600
+  - weaponPoint:
+    - {x: 1, y: 0.3, z: 0}
+    - {x: -1, y: 0.3, z: 0}
+    - {x: 0.5, y: 0.3, z: 0}
+    - {x: -0.5, y: 0.3, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 1200
+  - weaponPoint:
+    - {x: 1, y: 0.3, z: 0}
+    - {x: -1, y: 0.3, z: 0}
+    - {x: 0.5, y: 0.3, z: 0}
+    - {x: -0.5, y: 0.3, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 2400
+  - weaponPoint:
+    - {x: 1, y: 0.3, z: 0}
+    - {x: -1, y: 0.3, z: 0}
+    - {x: 0.5, y: 0.3, z: 0}
+    - {x: -0.5, y: 0.3, z: 0}
+    weaponInterva: 3
+    weaponSpeed: 300
+    weaponAttack: 5000

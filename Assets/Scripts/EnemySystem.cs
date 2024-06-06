@@ -33,7 +33,7 @@ namespace MTaka
                 data.attackAreaSize);
         }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             rig = GetComponent<Rigidbody2D>();
             ani = GetComponent<Animator>();

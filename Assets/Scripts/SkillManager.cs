@@ -50,6 +50,7 @@ namespace MTaka
 
         private void Awake()
         {
+            InitializePlayerData();
             ExpManager.instance.onUpgrade += PlayerUpgrade;
             ResetSkillLv();
             ButtonClickEvent();

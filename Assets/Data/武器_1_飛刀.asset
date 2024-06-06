@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u6B66\u5668_1_\u98DB\u5200"
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 8392050836205214847, guid: 133cb4cd70b334e419746090905c0cbf, type: 3}
-  weaponLv: 2
+  weaponLv: 1
   weaponValues:
   - weaponPoint:
     - {x: 1, y: 0, z: 0}
@@ -49,7 +49,7 @@ MonoBehaviour:
     - {x: 1, y: -0.5, z: 0}
     weaponInterva: 1.8
     weaponSpeed: 900
-    weaponAttack: 250
+    weaponAttack: 300
   - weaponPoint:
     - {x: 1, y: 0, z: 0}
     - {x: -1, y: 0, z: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
     - {x: -1, y: -0.5, z: 0}
     weaponInterva: 1.5
     weaponSpeed: 1000
-    weaponAttack: 300
+    weaponAttack: 500
   - weaponPoint:
     - {x: 1, y: 0, z: 0}
     - {x: -1, y: 0, z: 0}
@@ -70,7 +70,7 @@ MonoBehaviour:
     - {x: 1, y: -1, z: 0}
     weaponInterva: 1.2
     weaponSpeed: 1100
-    weaponAttack: 350
+    weaponAttack: 800
   - weaponPoint:
     - {x: 1, y: 0, z: 0}
     - {x: -1, y: 0, z: 0}
@@ -82,7 +82,7 @@ MonoBehaviour:
     - {x: -1, y: -1, z: 0}
     weaponInterva: 0.9
     weaponSpeed: 1200
-    weaponAttack: 400
+    weaponAttack: 1200
   - weaponPoint:
     - {x: 1, y: 0, z: 0}
     - {x: -1, y: 0, z: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
     - {x: 1.5, y: -0.25, z: 0}
     weaponInterva: 0.6
     weaponSpeed: 1300
-    weaponAttack: 450
+    weaponAttack: 1700
   - weaponPoint:
     - {x: 1, y: 0, z: 0}
     - {x: -1, y: 0, z: 0}
@@ -109,4 +109,4 @@ MonoBehaviour:
     - {x: -1.5, y: -0.25, z: 0}
     weaponInterva: 0.3
     weaponSpeed: 1400
-    weaponAttack: 500
+    weaponAttack: 1700
