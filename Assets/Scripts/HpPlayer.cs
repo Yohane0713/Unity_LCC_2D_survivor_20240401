@@ -34,6 +34,15 @@ namespace MTaka
             imgHp = GameObject.Find("圖片血條").GetComponent<Image>();
         }
 
+        private void OnParticleCollision(GameObject other)
+        {
+            // print($"<color=#f33>碰到的粒子：{other.name}</color>");
+
+            // 判斷碰到的粒子物件 是否有 武器元件 有的話才會受傷
+            if (other.TryGetComponent(out Weapon weapon))
+                Damage(weapon.attack);
+        }
+
         public override void Damage(float damage)
         {
             base.Damage(damage);

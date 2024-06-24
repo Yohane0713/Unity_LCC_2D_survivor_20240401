@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7de893d47d2a6a43b727f5d478f7315, type: 3}
+  m_Name: "\u6CE2\u6578_\u95DC\u5361_1"
+  m_EditorClassIdentifier: 
+  waves:
+  - duration: 6
+    interval: 3
+    prefabEnemies:
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    pointEnemies:
+    - {x: 12, y: 6, z: 0}
+    - {x: -12, y: 6, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.5377358, g: 0.26186967, b: 0.088777125, a: 0.5882353}
+  - duration: 5
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.3033108, g: 0.9056604, b: 0.44470736, a: 0.5882353}

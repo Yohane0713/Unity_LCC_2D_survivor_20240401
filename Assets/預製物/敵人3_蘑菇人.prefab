@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1111058023327467257}
   - component: {fileID: 7919733319756548838}
   - component: {fileID: 3638648104845423700}
+  - component: {fileID: 3637532186504657587}
+  - component: {fileID: -8442986203091665105}
   m_Layer: 0
   m_Name: "\u6575\u4EBA3_\u8611\u83C7\u4EBA"
   m_TagString: Untagged
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5738582951610303283}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.114212, y: -0.910812, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,3 +172,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3637532186504657587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5738582951610303283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f5f5df295f77a4a8160317780cc1ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: ebf3e1124e675fe46bf3e9d2d9dccfd7, type: 2}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &-8442986203091665105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5738582951610303283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8126205bfda4940bd24209fd6a3567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabDamageCanvas: {fileID: 894230096775537281, guid: 2ddc5e65cd8feb34e91de97c532ea939, type: 3}
+  dataEnemy: {fileID: 11400000, guid: ebf3e1124e675fe46bf3e9d2d9dccfd7, type: 2}
+  prefabExplosion: {fileID: 7483884093440617020, guid: d75dcb53ed787ad48a2f15aec7bb8ffd, type: 3}

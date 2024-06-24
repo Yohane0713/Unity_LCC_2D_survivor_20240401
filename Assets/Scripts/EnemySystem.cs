@@ -18,10 +18,10 @@ namespace MTaka
         private Animator ani;
         private Transform playerPosition;
         // 是否在攻擊中
-        private bool isAttacking;
+        protected bool isAttacking;
         #endregion
 
-        private void OnDrawGizmos()
+        protected virtual void OnDrawGizmos()
         {
             Gizmos.color = new Color(0.8f, 0.8f, 0.5f, 0.6f);
             Gizmos.DrawSphere(transform.position, data.attackRange);
@@ -33,6 +33,8 @@ namespace MTaka
                 data.attackAreaSize);
         }
 
+        protected IEnumerator attackMode;
+
         protected virtual void Awake()
         {
             rig = GetComponent<Rigidbody2D>();
@@ -41,6 +43,8 @@ namespace MTaka
             // 透過名稱尋找遊戲物件 GameObject.Find(物件名稱)
             // 玩家位置 = 尋找場景上名稱為"玩家_盜賊"的物件 的變形元件
             playerPosition =  GameObject.Find(GameManager.playerName).transform;
+
+            attackMode = StartAttack();
         }
 
         private void Update()
@@ -65,7 +69,15 @@ namespace MTaka
             if (CheckDistance() < data.attackRange) return;
             // 如果正在攻擊中 就跳出(不會邊移動邊攻擊)
             if (isAttacking) return;
+            rig.velocity = transform.right * data.moveSpeed + transform.up * rig.velocity.y;
+            ani.SetFloat(GameManager.parMove, 1);
+        }
 
+        /// <summary>
+        /// 移動方法，透過剛體 MovePosition
+        /// </summary>
+        private void MovePosition()
+        {
             // 獲得目前座標 = 敵人剛體座標
             Vector2 currentPoint = rig.position;
             // 玩家座標
@@ -79,8 +91,6 @@ namespace MTaka
 
             // 剛體 的 移動座標(要前往的座標)
             rig.MovePosition(movePosition);
-
-            ani.SetFloat(GameManager.parMove, 1);
         }
 
         /// <summary>
@@ -102,20 +112,20 @@ namespace MTaka
             return dis;
         }
 
-        private void Attack() 
+        protected virtual void Attack() 
         {
             // 如果距離大於等於攻擊範圍 就跳出
             if (CheckDistance() >= data.attackRange) return;
             // 如果正在攻擊中 就跳出
             if (isAttacking) return;
 
-            StartCoroutine(StartAttack());
+            StartCoroutine(attackMode);
         }
 
         /// <summary>
         /// 開始攻擊，敵人攻擊協同程序
         /// </summary>
-        private IEnumerator StartAttack()
+        protected IEnumerator StartAttack()
         {
             // 正在攻擊中
             isAttacking = true;
@@ -129,6 +139,8 @@ namespace MTaka
             // print("<color=#f99>後搖結束，恢復原本狀態</color>");
             // 恢復沒有在攻擊中
             isAttacking = false;
+
+            attackMode = StartAttack();
         }
 
         /// <summary>
