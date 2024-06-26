@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4471975048604737058}
   - component: {fileID: -3681645116683907311}
   - component: {fileID: 4909003372446194611}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u6575\u4EBA1_\u7368\u773C\u602A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
+  m_Mass: 0.5
   m_LinearDrag: 1.2
   m_AngularDrag: 0.05
   m_GravityScale: 0.3
