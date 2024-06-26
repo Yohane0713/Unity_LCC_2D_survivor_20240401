@@ -12,10 +12,6 @@ namespace MTaka
         private Rigidbody2D r2D;
         [SerializeField, Header("動畫控制元件")]
         private Animator ani;
-
-        private string parMove = "移動數值";
-        private string parJump = "觸發跳躍";
-        
         [SerializeField, Header("檢查地板位移")]
         private Vector3 checkGroundOffset;
         [SerializeField, Header("檢查地板尺寸")]
@@ -24,6 +20,12 @@ namespace MTaka
         private LayerMask layerCanJump;
         [SerializeField, Header("玩家血量系統")]
         private HpPlayer hpPlayer;
+
+        private string parMove = "移動數值";
+        private string parJump = "觸發跳躍";
+
+        public bool canMove { get; set; } = false;
+        public bool canJump { get; set; } = false;
         #endregion
 
         #region 事件區域
@@ -86,6 +88,8 @@ namespace MTaka
         /// <param name="h"></param>
         private void Move(float h)
         {
+            if (!canMove) return;
+
             // 剛體 的 加速度 = 新 二維向量(移動速度，原本剛體的 Y 軸加速度)
             r2D.velocity = new Vector2(dataPlayer.moveSpeed * h, r2D.velocity.y);
 
@@ -111,6 +115,7 @@ namespace MTaka
         /// </summary>
         private void Jump()
         {
+            if (!canJump) return;
             // 如果在地板上 並且 按下空白鍵 就 可以跳躍
             if (IsGround() && Input.GetKeyDown(KeyCode.Space))
             {
