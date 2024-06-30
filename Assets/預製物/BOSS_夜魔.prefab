@@ -211,5 +211,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabDamageCanvas: {fileID: 894230096775537281, guid: 2ddc5e65cd8feb34e91de97c532ea939, type: 3}
   dataEnemy: {fileID: 11400000, guid: f0700dc07c97e2245ac58207f481941c, type: 2}
-  prefabExplosion: {fileID: 0}
+  prefabExplosion: {fileID: 7483884093440617020, guid: d75dcb53ed787ad48a2f15aec7bb8ffd, type: 3}
   secondState: 0.5

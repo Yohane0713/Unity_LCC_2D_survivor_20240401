@@ -47,14 +47,16 @@ namespace MTaka
         {
             base.Damage(damage);
             imgHp.fillAmount = hp / hpMax;
+            SoundManager.instance.PlaySound(SoundManager.SoundType.PlayerHit, 0.6f, 1);
         }
 
         protected override void Dead()
         {
             base.Dead();
             ani.SetTrigger(parDead);
-            // 事件如果不為空值 就呼叫(發事件的此物件, 空值)
+            // 事件如果不為空值 就呼叫(觸發事件的此物件, 空值)
             onDead?.Invoke(this, null);
+            SoundManager.instance.PlaySound(SoundManager.SoundType.PlayerDead);
         }
 
         /// <summary>

@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace MTaka
 {
@@ -11,6 +12,7 @@ namespace MTaka
     {
         public static HpBoss instance;
         public event EventHandler onSecondState;
+        public event EventHandler onDead;
 
         [SerializeField, Header("血量剩餘多少進入狀態二"), Range(0, 1)]
         private float secondState = 0.5f;
@@ -43,6 +45,13 @@ namespace MTaka
                 onSecondState?.Invoke(this, null);
                 print("<color=#df3>進入狀態二</color>");
             }
+        }
+
+        protected override void Dead()
+        {
+            base.Dead();
+            onDead?.Invoke(this, null);
+            GameManager.instance.ShowWinCanvas();
         }
     }
 }

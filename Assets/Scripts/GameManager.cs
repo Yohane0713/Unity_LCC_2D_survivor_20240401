@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
+using Unity.VisualScripting;
 
 namespace MTaka
 {
@@ -10,6 +12,8 @@ namespace MTaka
     /// </summary>
     public class GameManager : MonoBehaviour
     {
+        public static GameManager instance;
+
         #region 常數資料
         // const 常數：不變的資料，常數資料不需放在物件上就可存取
         /// <summary>
@@ -32,20 +36,42 @@ namespace MTaka
         private CanvasGroup groupFinal;
 
         private Button btnReplay, btnQuit;
+        private TMP_Text textFinalTitle;
 
         private void Awake()
         {
+            textFinalTitle = GameObject.Find("文字結束標題").GetComponent<TMP_Text>();
             btnReplay = GameObject.Find("按鈕重新遊戲").GetComponent<Button>();
             btnQuit = GameObject.Find("按鈕結束遊戲 ").GetComponent<Button>();
-            hpPlayer.onDead += ShowFinalCanvas;
+            btnReplay.onClick.AddListener(Replay);
+            btnQuit.onClick.AddListener(Quit);
+
+            hpPlayer.onDead += ShowLoseCanvas;
+            // HpBoss.instance.onDead += ShowWinCanvas;
+            // 上面這行沒用到了，修改成把此腳本設為單例模式，直接給Boss的Hp腳本用
         }
 
         /// <summary>
-        /// 顯示結束畫面
+        /// 顯示失敗畫面
         /// </summary>
-        private void ShowFinalCanvas(object sender, System.EventArgs e)
+        private void ShowLoseCanvas(object sender, System.EventArgs e)
         {
+            Time.timeScale = 0;
+            textFinalTitle.text = "你死了\n\nGame Over";
             StartCoroutine(FadeCanvas());
+            SoundManager.instance.PlaySound(SoundManager.SoundType.Lose, 0.6f, 0.6f);
+        }
+
+        /// <summary>
+        /// 顯示勝利畫面
+        /// </summary>
+        public void ShowWinCanvas()
+        {
+            Time.timeScale = 0;
+            textFinalTitle.text = "恭喜冒險者 \n你征服了這個幻境！";
+            StartCoroutine(FadeCanvas());
+            SoundManager.instance.PlaySound(SoundManager.SoundType.WinIntro, 0.6f, 0.6f);
+            SoundManager.instance.PlaySound(SoundManager.SoundType.Win, 0.6f, 0.6f);
         }
 
         /// <summary>
@@ -75,8 +101,10 @@ namespace MTaka
 
         private void Quit()
         {
-            // 僅在執行檔有副作用 (exe APK)
+            //應用程式-離開 僅在執行檔有作用 (exe APK)
             Application.Quit();
         }
+
+        
     }
 }

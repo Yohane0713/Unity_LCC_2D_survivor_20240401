@@ -12,7 +12,7 @@ namespace MTaka
         [SerializeField, Header("是否碰撞後刪除")]
         private bool destroyAfterHit;
         [SerializeField, Header("碰撞幾次後刪除"), Range(0, 10)]
-        private int destroyAfterHitTime = 3;
+        private int destroyAfterHitTime = 4;
 
         private int hitTime;
 

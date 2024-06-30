@@ -41,6 +41,15 @@ namespace MTaka
             }
         }
 
+        public override void Damage(float damage)
+        {
+            base.Damage(damage);
+            if (dataEnemy.name.Contains("獨眼怪") || dataEnemy.name.Contains("哥布林") || dataEnemy.name.Contains("蘑菇人"))
+                SoundManager.instance.PlaySound(SoundManager.SoundType.EnemyHitCreature, 0.6f, 1);
+            else if (dataEnemy.name.Contains("骷髏怪"))
+                SoundManager.instance.PlaySound(SoundManager.SoundType.EnemyHitBone);
+        }
+
         // 使用關鍵字 override 可以覆寫父類別有 virtual 的成員
         protected override void Dead()
         {
@@ -52,7 +61,14 @@ namespace MTaka
             // 刪除此物件
             Destroy(gameObject);
             Destroy(tempExplosion, 1.5f);
+
             DropExpObject();
+            if (dataEnemy.name.Contains("獨眼怪"))
+                SoundManager.instance.PlaySound(SoundManager.SoundType.EnemyDeadSingleEye);
+            else if (dataEnemy.name.Contains("哥布林"))
+                SoundManager.instance.PlaySound(SoundManager.SoundType.EnemyDeadGoblin);
+            else if (dataEnemy.name.Contains("骷髏怪"))
+                SoundManager.instance.PlaySound(SoundManager.SoundType.EnemyDeadSkull);
         }
 
         /// <summary>

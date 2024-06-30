@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   hp: 10000
-  attack: 1000
+  attack: 1500
   prefabExp: {fileID: 0}
   expProbability: 1
   attackRange: 0

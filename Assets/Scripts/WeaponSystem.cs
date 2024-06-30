@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static MTaka.SoundManager;
 
 namespace MTaka
 {
@@ -88,7 +89,15 @@ namespace MTaka
 
                 // 暫存武器 的 武器攻擊力 = 當前武器等級的攻擊力
                 tempWeapon.GetComponent<Weapon>().attack = weaponCurrentLv.weaponAttack;
+
+                PlaySound();
             }
+        }
+
+        private void PlaySound()
+        {
+            if (dataWeapon.name.Contains("飛刀")) SoundManager.instance.PlaySound(SoundType.Knife);
+            else if (dataWeapon.name.Contains("彈跳武器")) SoundManager.instance.PlaySound(SoundType.Bounce);
         }
 
         /// <summary>

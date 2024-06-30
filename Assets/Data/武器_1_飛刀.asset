@@ -58,7 +58,7 @@ MonoBehaviour:
     - {x: 1, y: -0.5, z: 0}
     - {x: -1, y: -0.5, z: 0}
     weaponInterva: 1.5
-    weaponSpeed: 1000
+    weaponSpeed: 500
     weaponAttack: 500
   - weaponPoint:
     - {x: 1, y: 0, z: 0}
@@ -70,7 +70,7 @@ MonoBehaviour:
     - {x: 1, y: -1, z: 0}
     weaponInterva: 1.2
     weaponSpeed: 1100
-    weaponAttack: 800
+    weaponAttack: 900
   - weaponPoint:
     - {x: 1, y: 0, z: 0}
     - {x: -1, y: 0, z: 0}
@@ -109,4 +109,4 @@ MonoBehaviour:
     - {x: -1.5, y: -0.25, z: 0}
     weaponInterva: 0.3
     weaponSpeed: 1400
-    weaponAttack: 1700
+    weaponAttack: 2400
