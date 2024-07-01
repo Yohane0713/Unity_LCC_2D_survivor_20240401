@@ -75,6 +75,11 @@ namespace MTaka
                     transform.TransformDirection(pointLightBall[i]);
                 Weapon weapon = Instantiate(prefabLightBall, point, Quaternion.identity).GetComponent<Weapon>();
                 weapon.attack = attackLightBall;
+
+                float y = transform.eulerAngles.y;
+                float weaponY = y == 0 ? 180 : 0;
+                weapon.transform.eulerAngles = Vector3.up * weaponY;
+
                 yield return new WaitForSeconds(intervalLightBall);
             }
 

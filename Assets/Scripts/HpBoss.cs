@@ -51,6 +51,7 @@ namespace MTaka
         {
             base.Dead();
             onDead?.Invoke(this, null);
+            SoundManager.instance.StopSoundBattle();
             GameManager.instance.ShowWinCanvas();
         }
     }

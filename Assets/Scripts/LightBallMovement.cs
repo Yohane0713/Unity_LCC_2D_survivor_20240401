@@ -21,7 +21,7 @@ namespace MTaka
                 transform.TransformDirection(pointTarget), 0.1f);
         }
 
-        private void Awake()
+        private void Start()
         {
             transform.DOMove(
                 transform.position +

@@ -56,7 +56,8 @@ namespace MTaka
             ani.SetTrigger(parDead);
             // 事件如果不為空值 就呼叫(觸發事件的此物件, 空值)
             onDead?.Invoke(this, null);
-            SoundManager.instance.PlaySound(SoundManager.SoundType.PlayerDead);
+            SoundManager.instance.PlaySound(SoundManager.SoundType.PlayerDead, 0.7f);
+            SoundManager.instance.StopSoundBattle();
         }
 
         /// <summary>

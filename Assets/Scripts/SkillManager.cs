@@ -47,6 +47,8 @@ namespace MTaka
 
         [SerializeField, Header("升級系統：1 ~ 7")]
         private GameObject[] goUpgradeSystem;
+        [SerializeField, Header("按鈕技能全滿提示")]
+        public Button btnAllSkillFull;
 
         private void Awake()
         {
@@ -54,6 +56,11 @@ namespace MTaka
             ExpManager.instance.onUpgrade += PlayerUpgrade;
             ResetSkillLv();
             ButtonClickEvent();
+            btnAllSkillFull.onClick.AddListener(() =>
+            {
+                StartCoroutine(FadeGroupUpgrade(false));
+                Time.timeScale = 1;
+            });
         }
 
         /// <summary>
@@ -95,6 +102,8 @@ namespace MTaka
             var dataSkillLess10 = dataSkills.Where(skill => skill.skillLv < 10);
             // 洗牌
             dataSkillShuffle = dataSkillLess10.OrderBy(skill => Random.Range(0, 999)).ToList();
+            // 技能等級全滿時 就顯示 全滿按鈕
+            if (dataSkillShuffle.Count == 0) btnAllSkillFull.gameObject.SetActive(true);
         }
 
         /// <summary>
@@ -104,6 +113,13 @@ namespace MTaka
         {
             for (int i = 0; i < btnSkills.Length; i++)
             {
+                // 如果 i 大於等於 洗牌後的技能 (ex:2 >= 2 剩餘的技能數量)，就關掉該按鈕
+                if (i >= dataSkillShuffle.Count)
+                {
+                    btnSkills[i].gameObject.SetActive(false);
+                    return;
+                }
+
                 DataSkill data = dataSkillShuffle[i];
                 btnSkills[i].transform.Find(nameTextSkill).GetComponent<TMP_Text>().text = data.skillName;
                 btnSkills[i].transform.Find(nameImageSkill).GetComponent<Image>().sprite = data.skillSprite;

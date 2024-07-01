@@ -190,9 +190,9 @@ MonoBehaviour:
     m_Bits: 128
   prefabLightBall: {fileID: 3283975207067783548, guid: ce72945358edcda44918c5457aebb185, type: 3}
   pointLightBall:
-  - {x: 2, y: 7, z: 0}
-  - {x: 5, y: 6.5, z: 0}
-  - {x: 8, y: 6.8, z: 0}
+  - {x: -2, y: 7, z: 0}
+  - {x: -5, y: 6.5, z: 0}
+  - {x: -7.5, y: 6.8, z: 0}
   intervalLightBall: 0.3
   secondAttackTime: 3
   attackLightBall: 3

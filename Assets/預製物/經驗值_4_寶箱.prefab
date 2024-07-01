@@ -173,4 +173,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyspeed: 3.5
   getExpDistance: 1.5
-  exp: 1000
+  exp: 2000

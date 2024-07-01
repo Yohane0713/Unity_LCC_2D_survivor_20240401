@@ -8,11 +8,11 @@ namespace MTaka
     public class DestroyObject : MonoBehaviour
     {
         [SerializeField, Header("刪除物件時間"), Range(0, 10)]
-        private float destroyTime = 3;
+        private float destroyTime = 5;
         [SerializeField, Header("是否碰撞後刪除")]
         private bool destroyAfterHit;
         [SerializeField, Header("碰撞幾次後刪除"), Range(0, 10)]
-        private int destroyAfterHitTime = 4;
+        private int destroyAfterHitTime = 5;
 
         private int hitTime;
 

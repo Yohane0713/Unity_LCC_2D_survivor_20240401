@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 868899093503441700}
   - component: {fileID: 7425334443275067444}
   - component: {fileID: 4471975048604737058}
-  - component: {fileID: -3681645116683907311}
+  - component: {fileID: -4300182770269928562}
   - component: {fileID: 4909003372446194611}
   m_Layer: 8
   m_Name: "\u6575\u4EBA1_\u7368\u773C\u602A"
@@ -101,10 +101,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 5
   m_LinearDrag: 1.2
   m_AngularDrag: 0.05
-  m_GravityScale: 0.3
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -172,7 +172,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-3681645116683907311
+--- !u!114 &-4300182770269928562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 265681810375078221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f5f5df295f77a4a8160317780cc1ab, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0a87fd2694dc24d9322e0e339b9852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: e71be94b2d6dd874d9aae9dc810806b2, type: 2}

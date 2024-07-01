@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u6280\u80FD_4_\u5438\u53D6\u7BC4\u570D"
   m_EditorClassIdentifier: 
   skillName: "\u5438\u53D6\u7BC4\u570D"
-  skillLv: 1
+  skillLv: 10
   skillSprite: {fileID: 21300000, guid: 1d6d7bf04d2101c4ea04650b6d6b911b, type: 3}
   skillUpgrade: "\u63D0\u53471\u5438\u53D6\u7BC4\u570D"
   skillDescription: "\u63D0\u5347 1 \u500B\u55AE\u4F4D\u7684\u5438\u53D6\u7D93\u9A57\u503C\u7BC4\u570D\u3002"

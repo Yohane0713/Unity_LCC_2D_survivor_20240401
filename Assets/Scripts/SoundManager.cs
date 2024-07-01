@@ -33,16 +33,17 @@ namespace MTaka
         [SerializeField] private AudioClip soundEnemyDeadBoss;
         [SerializeField] private AudioClip soundPlayerHit;
         [SerializeField] private AudioClip soundPlayerDead;
-        [SerializeField] private AudioClip soundBattle;
         [SerializeField] private AudioClip soundWinIntro;
         [SerializeField] private AudioClip soundWin;
         [SerializeField] private AudioClip soundLose;
 
         private AudioSource aud;
+        private GameObject soundBattle;
 
         private void Awake()
         {
             aud = GetComponent<AudioSource>();
+            soundBattle = GameObject.Find("BGM_戰鬥");
         }
 
         /// <summary>
@@ -75,7 +76,6 @@ namespace MTaka
                 SoundType.EnemyDeadBoss => soundEnemyDeadBoss,
                 SoundType.PlayerHit => soundPlayerHit,
                 SoundType.PlayerDead => soundPlayerDead,
-                SoundType.Battle => soundBattle,
                 SoundType.WinIntro => soundWinIntro,
                 SoundType.Win => soundWin,
                 SoundType.Lose => soundLose,
@@ -94,7 +94,7 @@ namespace MTaka
 
         public void StopSoundBattle()
         {
-            
+            soundBattle.GetComponent<AudioSource>().Stop();
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace MTaka
         public enum SoundType
         {
             None, Knife, Bounce, EnemyHitCreature, EnemyHitBone, EnemyDeadSingleEye, EnemyDeadGoblin,
-            EnemyDeadSkull, EnemyDeadBoss, PlayerHit, PlayerDead, WinIntro, Win, Lose, Battle
+            EnemyDeadSkull, EnemyDeadBoss, PlayerHit, PlayerDead, WinIntro, Win, Lose
         }
     }
 }

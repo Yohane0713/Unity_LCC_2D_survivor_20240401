@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9afd341a40aec6248955fa48cff7c713, type: 3}
   m_Name: "\u6575\u4EBA_BOSS_\u591C\u9B54"
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
+  moveSpeed: 4
   hp: 100000
-  attack: 7000
+  attack: 5000
   prefabExp: {fileID: 0}
   expProbability: 0
-  attackRange: 3.3
+  attackRange: 3.4
   attackBefore: 0.5
   attackAfter: 2
   attackAreaSize: {x: 2.7, y: 2.5, z: 1}

@@ -56,7 +56,6 @@ namespace MTaka
         /// </summary>
         private void ShowLoseCanvas(object sender, System.EventArgs e)
         {
-            Time.timeScale = 0;
             textFinalTitle.text = "你死了\n\nGame Over";
             StartCoroutine(FadeCanvas());
             SoundManager.instance.PlaySound(SoundManager.SoundType.Lose, 0.6f, 0.6f);
@@ -67,7 +66,6 @@ namespace MTaka
         /// </summary>
         public void ShowWinCanvas()
         {
-            Time.timeScale = 0;
             textFinalTitle.text = "恭喜冒險者 \n你征服了這個幻境！";
             StartCoroutine(FadeCanvas());
             SoundManager.instance.PlaySound(SoundManager.SoundType.WinIntro, 0.6f, 0.6f);
