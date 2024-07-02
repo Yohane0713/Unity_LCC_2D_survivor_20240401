@@ -1639,7 +1639,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 82442095}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 82442104}
   variables: []
   description: 
   stepPause: 0
@@ -2019,7 +2020,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1807922057}
   startVolume: 1
-  endVolume: 0.6
+  endVolume: 0.5
   fadeDuration: 0.5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -26622,7 +26623,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5d1017f6624268a469c384622dee0e70, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

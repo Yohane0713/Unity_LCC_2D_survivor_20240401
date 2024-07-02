@@ -156,7 +156,8 @@ namespace MTaka
             // hit?.name 如果打到的不是空值 才取得name
             // print($"<color=#f99>攻擊到的物件：{hit?.name}</color>");
             // 擊中物件 的 玩家血量 的 受傷 (敵人資料的攻擊力)
-            hit?.GetComponent<HpPlayer>().Damage(data.attack);
+            float attack = Mathf.Floor(data.attack = Random.Range(0, data.attack * 0.2f));
+            hit?.GetComponent<HpPlayer>().Damage(attack);
         }
     }
 }

@@ -189,4 +189,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 10
   destroyAfterHit: 0
-  destroyAfterHitTime: 3
+  destroyAfterHitTime: 5

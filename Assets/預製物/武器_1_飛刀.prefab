@@ -175,5 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c11a009105e3d419640bdd8e287d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 3
-  destroyAfterHit: 0
+  destroyTime: 5
+  destroyAfterHit: 1
+  destroyAfterHitTime: 2

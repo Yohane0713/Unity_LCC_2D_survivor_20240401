@@ -7,6 +7,18 @@ namespace MTaka
     /// </summary>
     public class UpgradeCriticalRate : UpgradePlayer
     {
+        public static UpgradeCriticalRate instance
+        {
+            get
+            {
+                if (_instance == null) return FindObjectOfType<UpgradeCriticalRate>();
+                return _instance;
+            }
+        }
+        private static UpgradeCriticalRate _instance;
+
+        public float criticalRate => dataPlayer.criticalRate;
+
         public override void InitializePlayerData(float value)
         {
             base.InitializePlayerData(value);
