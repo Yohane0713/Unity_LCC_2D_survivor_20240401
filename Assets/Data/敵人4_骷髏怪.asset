@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   hp: 10000
-  attack: 1500
+  attack: 2000
   prefabExp: {fileID: 8015173607431956263, guid: e3beaeb025dd52f41852eda3d7967545, type: 3}
   expProbability: 1
-  attackRange: 0
-  attackBefore: 0
-  attackAfter: 0
-  attackAreaSize: {x: 1, y: 1, z: 1}
-  attackAreaOffset: {x: 0, y: 0, z: 0}
+  attackRange: 3
+  attackBefore: 0.5
+  attackAfter: 2
+  attackAreaSize: {x: 2.6, y: 2.6, z: 1}
+  attackAreaOffset: {x: 1.8, y: -0.3, z: 0}

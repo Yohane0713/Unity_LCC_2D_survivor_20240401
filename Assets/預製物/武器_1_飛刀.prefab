@@ -178,3 +178,4 @@ MonoBehaviour:
   destroyTime: 5
   destroyAfterHit: 1
   destroyAfterHitTime: 2
+  changeNameAfterHit: 1

@@ -13,6 +13,8 @@ namespace MTaka
         private bool destroyAfterHit;
         [SerializeField, Header("碰撞幾次後刪除"), Range(0, 10)]
         private int destroyAfterHitTime = 5;
+        [SerializeField, Header("是否碰撞一次後變更名稱")]
+        private bool changeNameAfterHit;
 
         private int hitTime;
 
@@ -25,6 +27,7 @@ namespace MTaka
         {
             DestroyAfterHit();
             DestroyAfterHitTime();
+            ChangeName();
         }
 
         /// <summary>
@@ -32,7 +35,10 @@ namespace MTaka
         /// </summary>
         private void DestroyAfterHit()
         {
-            if (destroyAfterHit) Destroy(gameObject);
+            if (destroyAfterHit)
+            {
+                Destroy(gameObject);
+            }
         }
 
         /// <summary>
@@ -41,7 +47,22 @@ namespace MTaka
         private void DestroyAfterHitTime()
         {
             hitTime++;
-            if (hitTime >= destroyAfterHitTime) Destroy(gameObject);
+            if (hitTime >= destroyAfterHitTime)
+            {
+                ChangeName();
+                Destroy(gameObject);
+            }
+        }
+
+        /// <summary>
+        /// 更變名稱，給不會再用到的物件使用
+        /// </summary>
+        private void ChangeName()
+        {
+            if (changeNameAfterHit)
+            {
+                name = "---";
+            }
         }
     }
 
