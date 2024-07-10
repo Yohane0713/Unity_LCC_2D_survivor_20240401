@@ -17,17 +17,162 @@ MonoBehaviour:
     interval: 3
     prefabEnemies:
     - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
     pointEnemies:
     - {x: 12, y: 6, z: 0}
     - {x: -12, y: 6, z: 0}
     drawGizmos: 1
     gizmosColor: {r: 0.5377358, g: 0.26186967, b: 0.088777125, a: 0.5882353}
-  - duration: 5
+  - duration: 6
+    interval: 3
+    prefabEnemies:
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    pointEnemies:
+    - {x: 12, y: 6, z: 0}
+    - {x: -12, y: 6, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.8018868, g: 0.51015836, b: 0, a: 0.5882353}
+  - duration: 6
     interval: 3
     prefabEnemies:
     - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
     pointEnemies:
     - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
     drawGizmos: 1
-    gizmosColor: {r: 0.3033108, g: 0.9056604, b: 0.44470736, a: 0.5882353}
+    gizmosColor: {r: 0.8, g: 0.7706262, b: 0, a: 0.5882353}
+  - duration: 9
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.0075187096, g: 0.5188679, b: 0, a: 0.5882353}
+  - duration: 9
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
+    - {x: -12, y: 0, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.0075187096, g: 0.5188679, b: 0, a: 0.5882353}
+  - duration: 9
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
+    - {x: -12, y: 0, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0, g: 0.509434, b: 0.509434, a: 0.5882353}
+  - duration: 9
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
+    - {x: -12, y: 0, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.043959048, g: 0, b: 0.5176471, a: 0.5882353}
+  - duration: 9
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
+    - {x: -12, y: 0, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.6698113, g: 0, b: 0.57692987, a: 0.5882353}
+  - duration: 9
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
+    - {x: -12, y: 0, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.6792453, g: 0, b: 0.006582728, a: 0.5882353}
+  - duration: 12
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
+    - {x: -12, y: 0, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.8018868, g: 0.34300363, b: 0, a: 0.5882353}
+  - duration: 12
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
+    - {x: -12, y: 0, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.8018868, g: 0.34300363, b: 0, a: 0.5882353}
+  - duration: 12
+    interval: 3
+    prefabEnemies:
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
+    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
+    pointEnemies:
+    - {x: 12, y: 0, z: 0}
+    - {x: 11, y: 6, z: 0}
+    - {x: -11, y: 6, z: 0}
+    - {x: -12, y: 0, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.8018868, g: 0.34300363, b: 0, a: 0.5882353}
