@@ -17,7 +17,6 @@ namespace MTaka
         [Header("獲得經驗值範圍"), Range(0, 20)]
         public float getExpRaduis = 3;
         [Header("暴擊率"), Range(0, 1)]
-        public float criticalRate = 0;
-
+        public float criticalRate = 0.3f;
     }
 }

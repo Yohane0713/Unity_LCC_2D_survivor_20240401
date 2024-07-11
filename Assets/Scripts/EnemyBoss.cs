@@ -17,7 +17,7 @@ namespace MTaka
         private float intervalLightBall = 0.3f;
         [SerializeField, Header("狀態二攻擊時間"), Range(0, 10)]
         private float secondAttackTime = 3;
-        [SerializeField, Header("光球攻擊力"), Range(0, 30)]
+        [SerializeField, Header("光球攻擊力"), Range(0, 100000)]
         private float attackLightBall;
         [SerializeField, Header("狀態二攻擊機率"), Range(0, 1)]
         private float secondAttackProbability = 0.7f;

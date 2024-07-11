@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 namespace MTaka
 {
@@ -33,6 +34,7 @@ namespace MTaka
         [SerializeField] private AudioClip soundEnemyDeadBoss;
         [SerializeField] private AudioClip soundPlayerHit;
         [SerializeField] private AudioClip soundPlayerDead;
+        [SerializeField] private AudioClip soundBossAppear;
         [SerializeField] private AudioClip soundWinIntro;
         [SerializeField] private AudioClip soundWin;
         [SerializeField] private AudioClip soundLose;
@@ -52,7 +54,7 @@ namespace MTaka
         /// <param name="soundType">音效類型</param>
         /// <param name="min">最小音量</param>
         /// <param name="max">最大音量</param>
-        public void PlaySound(SoundType soundType, float min = 0.6f, float max = 1.2f)
+        public void PlaySound(SoundType soundType, float min = 0, float max = 1.2f)
         {
             float volume = Random.Range(min, max);
             aud.PlayOneShot(GetSound(soundType), volume);
@@ -76,6 +78,7 @@ namespace MTaka
                 SoundType.EnemyDeadBoss => soundEnemyDeadBoss,
                 SoundType.PlayerHit => soundPlayerHit,
                 SoundType.PlayerDead => soundPlayerDead,
+                SoundType.BossAppear => soundBossAppear,
                 SoundType.WinIntro => soundWinIntro,
                 SoundType.Win => soundWin,
                 SoundType.Lose => soundLose,
@@ -103,7 +106,7 @@ namespace MTaka
         public enum SoundType
         {
             None, Knife, Bounce, EnemyHitCreature, EnemyHitBone, EnemyDeadSingleEye, EnemyDeadGoblin,
-            EnemyDeadSkull, EnemyDeadBoss, PlayerHit, PlayerDead, WinIntro, Win, Lose
+            EnemyDeadSkull, EnemyDeadBoss, PlayerHit, PlayerDead, WinIntro, Win, Lose, BossAppear
         }
     }
 }

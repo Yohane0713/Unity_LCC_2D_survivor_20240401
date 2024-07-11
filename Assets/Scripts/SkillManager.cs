@@ -68,6 +68,7 @@ namespace MTaka
         /// </summary>
         private void PlayerUpgrade(object sender, System.EventArgs e)
         {
+            if (btnAllSkillFull.isActiveAndEnabled == true) return;
             // 時間.時間尺寸 = 0 (時間暫停)
             Time.timeScale = 0;
             ShuffleAndGetSkillData();
@@ -197,7 +198,7 @@ namespace MTaka
         /// </summary>
         private void ResetSkillLv()
         {
-            for (int i = 0; i < dataSkills.Length;i++)
+            for (int i = 0; i < dataSkills.Length; i++)
             {
                 dataSkills[i].skillLv = 1;
             }
@@ -211,8 +212,6 @@ namespace MTaka
             goUpgradeSystem[0].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[0].skillInitilizeValue);
             goUpgradeSystem[1].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[1].skillInitilizeValue);
             goUpgradeSystem[2].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[2].skillInitilizeValue);
-            goUpgradeSystem[3].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[3].skillInitilizeValue);
-            goUpgradeSystem[6].GetComponent<UpgradePlayer>().InitializePlayerData(dataSkills[6].skillInitilizeValue);
         }
     }
 }

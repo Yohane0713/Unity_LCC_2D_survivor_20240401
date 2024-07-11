@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9afd341a40aec6248955fa48cff7c713, type: 3}
   m_Name: "\u6575\u4EBA4_\u9AB7\u9ACF\u602A"
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  hp: 10000
-  attack: 2000
+  moveSpeed: 3
+  hp: 20000
+  attack: 3000
   prefabExp: {fileID: 8015173607431956263, guid: e3beaeb025dd52f41852eda3d7967545, type: 3}
   expProbability: 1
   attackRange: 3

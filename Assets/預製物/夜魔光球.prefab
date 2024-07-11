@@ -4861,7 +4861,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 2.5
   destroyAfterHit: 0
-  destroyAfterHitTime: 3
+  destroyAfterHitTime: 8
+  changeNameAfterHit: 0
 --- !u!114 &6371820819848973428
 MonoBehaviour:
   m_ObjectHideFlags: 0

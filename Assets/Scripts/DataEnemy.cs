@@ -10,9 +10,9 @@ namespace MTaka
     {
         [Header("移動速度"), Range(0, 20)]
         public float moveSpeed;
-        [Header("血量"), Range(0, 100000)]
+        [Header("血量"), Range(0, 1000000)]
         public float hp;
-        [Header("攻擊力"), Range(0, 10000)]
+        [Header("攻擊力"), Range(0, 100000)]
         public float attack;
         [Header("經驗值預製物")]
         public GameObject prefabExp;

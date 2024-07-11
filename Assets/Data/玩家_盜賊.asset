@@ -16,4 +16,4 @@ MonoBehaviour:
   jump: 450
   hp: 200
   getExpRaduis: 3
-  criticalRate: 0
+  criticalRate: 0.4

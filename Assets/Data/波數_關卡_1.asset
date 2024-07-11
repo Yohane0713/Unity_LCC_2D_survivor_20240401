@@ -50,7 +50,6 @@ MonoBehaviour:
     - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
     - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
     - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
     pointEnemies:
     - {x: 12, y: 0, z: 0}
     - {x: 11, y: 6, z: 0}
@@ -99,7 +98,7 @@ MonoBehaviour:
     - {x: -12, y: 0, z: 0}
     drawGizmos: 1
     gizmosColor: {r: 0.043959048, g: 0, b: 0.5176471, a: 0.5882353}
-  - duration: 9
+  - duration: 12
     interval: 3
     prefabEnemies:
     - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
@@ -113,14 +112,13 @@ MonoBehaviour:
     - {x: -12, y: 0, z: 0}
     drawGizmos: 1
     gizmosColor: {r: 0.6698113, g: 0, b: 0.57692987, a: 0.5882353}
-  - duration: 9
+  - duration: 12
     interval: 3
     prefabEnemies:
     - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
     - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
+    - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
     pointEnemies:
     - {x: 12, y: 0, z: 0}
     - {x: 11, y: 6, z: 0}
@@ -133,9 +131,7 @@ MonoBehaviour:
     prefabEnemies:
     - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
     - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
+    - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
     - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
     pointEnemies:
     - {x: 12, y: 0, z: 0}
@@ -147,32 +143,40 @@ MonoBehaviour:
   - duration: 12
     interval: 3
     prefabEnemies:
-    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
-    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
     - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
+    - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
+    - {fileID: 1389748466518073844, guid: 99b6869af9ea4e444b255e68719164a6, type: 3}
+    - {fileID: 1389748466518073844, guid: 99b6869af9ea4e444b255e68719164a6, type: 3}
     pointEnemies:
     - {x: 12, y: 0, z: 0}
     - {x: 11, y: 6, z: 0}
     - {x: -11, y: 6, z: 0}
     - {x: -12, y: 0, z: 0}
     drawGizmos: 1
-    gizmosColor: {r: 0.8018868, g: 0.34300363, b: 0, a: 0.5882353}
+    gizmosColor: {r: 0.8, g: 0.7001354, b: 0, a: 0.5882353}
   - duration: 12
     interval: 3
     prefabEnemies:
     - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
     - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 265681810375078221, guid: 02bb33a19857a5a4181c53bf0eb1ba17, type: 3}
-    - {fileID: 7534766463158162131, guid: 381ad058f0c6a5b45806b9aa8d2edeb5, type: 3}
     - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
+    - {fileID: 5738582951610303283, guid: f241738ace9a17f4692593c0c17fdd08, type: 3}
+    - {fileID: 1389748466518073844, guid: 99b6869af9ea4e444b255e68719164a6, type: 3}
+    - {fileID: 1389748466518073844, guid: 99b6869af9ea4e444b255e68719164a6, type: 3}
     pointEnemies:
     - {x: 12, y: 0, z: 0}
     - {x: 11, y: 6, z: 0}
     - {x: -11, y: 6, z: 0}
     - {x: -12, y: 0, z: 0}
+    - {x: 10, y: 0, z: 0}
+    - {x: -10, y: 0, z: 0}
     drawGizmos: 1
-    gizmosColor: {r: 0.8018868, g: 0.34300363, b: 0, a: 0.5882353}
+    gizmosColor: {r: 0.05682726, g: 0.5188679, b: 0, a: 0.5882353}
+  - duration: 1
+    interval: 1
+    prefabEnemies:
+    - {fileID: 605065922325744205, guid: 0a53414372c8d7c49b8dea85b5f071a2, type: 3}
+    pointEnemies:
+    - {x: 20, y: 2, z: 0}
+    drawGizmos: 1
+    gizmosColor: {r: 0.5215274, g: 0, b: 0.6603774, a: 0.5882353}
