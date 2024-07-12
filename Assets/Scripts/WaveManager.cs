@@ -46,10 +46,9 @@ namespace MTaka
                     yield return new WaitForSeconds(wave.interval); // 等待生成間隔
                     time -= wave.interval;  // 生成後時間遞減
                 }
-                if (dataWave.waves.Length == i)
+                if (i == dataWave.waves.Length - 1)
                 {
-                    SoundManager.instance.StopSoundBattle();
-                    SoundManager.instance.PlaySound(SoundManager.SoundType.BossAppear, 0.6f, 0.6f);
+                    SoundManager.instance.StopSoundBattleAndPlaySoundBoss();
                 }
                 yield return new WaitForSeconds(time);  // 等待剩餘時間
             }

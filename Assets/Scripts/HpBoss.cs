@@ -51,7 +51,8 @@ namespace MTaka
         {
             base.Dead();
             onDead?.Invoke(this, null);
-            SoundManager.instance.StopSoundBattle();
+            SoundManager.instance.PlaySound(SoundManager.SoundType.EnemyDeadBoss, 0.8f, 0.8f);
+            SoundManager.instance.StopSoundBoss();
             GameManager.instance.ShowWinCanvas();
         }
     }

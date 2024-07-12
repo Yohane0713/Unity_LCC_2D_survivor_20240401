@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace MTaka
@@ -34,27 +35,32 @@ namespace MTaka
         [SerializeField] private AudioClip soundEnemyDeadBoss;
         [SerializeField] private AudioClip soundPlayerHit;
         [SerializeField] private AudioClip soundPlayerDead;
-        [SerializeField] private AudioClip soundBossAppear;
         [SerializeField] private AudioClip soundWinIntro;
         [SerializeField] private AudioClip soundWin;
         [SerializeField] private AudioClip soundLose;
 
         private AudioSource aud;
+        private AudioSource audBattle;
+        private AudioSource audBoss;
         private GameObject soundBattle;
+        private GameObject soundBoss;
 
         private void Awake()
         {
             aud = GetComponent<AudioSource>();
             soundBattle = GameObject.Find("BGM_戰鬥");
+            soundBoss = GameObject.Find("BGM_BOSS");
+            audBattle = soundBattle.GetComponent<AudioSource>();
+            audBoss = soundBoss.GetComponent<AudioSource>();
         }
 
-        /// <summary>
-        /// 播放音效(隨機音量)
-        /// </summary>
-        /// <param name="soundType">音效類型</param>
-        /// <param name="min">最小音量</param>
-        /// <param name="max">最大音量</param>
-        public void PlaySound(SoundType soundType, float min = 0, float max = 1.2f)
+    /// <summary>
+    /// 播放音效(隨機音量)
+    /// </summary>
+    /// <param name="soundType">音效類型</param>
+    /// <param name="min">最小音量</param>
+    /// <param name="max">最大音量</param>
+    public void PlaySound(SoundType soundType, float min = 0.6f, float max = 1.2f)
         {
             float volume = Random.Range(min, max);
             aud.PlayOneShot(GetSound(soundType), volume);
@@ -78,7 +84,6 @@ namespace MTaka
                 SoundType.EnemyDeadBoss => soundEnemyDeadBoss,
                 SoundType.PlayerHit => soundPlayerHit,
                 SoundType.PlayerDead => soundPlayerDead,
-                SoundType.BossAppear => soundBossAppear,
                 SoundType.WinIntro => soundWinIntro,
                 SoundType.Win => soundWin,
                 SoundType.Lose => soundLose,
@@ -97,7 +102,18 @@ namespace MTaka
 
         public void StopSoundBattle()
         {
-            soundBattle.GetComponent<AudioSource>().Stop();
+            audBattle.mute = true;
+        }
+
+        public void StopSoundBoss()
+        { 
+            audBoss.mute = true;
+        }
+
+        public void StopSoundBattleAndPlaySoundBoss()
+        {
+            audBattle.mute = true;
+            audBoss.Play();
         }
 
         /// <summary>
@@ -106,7 +122,7 @@ namespace MTaka
         public enum SoundType
         {
             None, Knife, Bounce, EnemyHitCreature, EnemyHitBone, EnemyDeadSingleEye, EnemyDeadGoblin,
-            EnemyDeadSkull, EnemyDeadBoss, PlayerHit, PlayerDead, WinIntro, Win, Lose, BossAppear
+            EnemyDeadSkull, EnemyDeadBoss, PlayerHit, PlayerDead, WinIntro, Win, Lose
         }
     }
 }
