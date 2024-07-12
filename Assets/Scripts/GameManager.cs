@@ -40,6 +40,8 @@ namespace MTaka
 
         private void Awake()
         {
+            instance = this;
+
             textFinalTitle = GameObject.Find("文字結束標題").GetComponent<TMP_Text>();
             btnReplay = GameObject.Find("按鈕重新遊戲").GetComponent<Button>();
             btnQuit = GameObject.Find("按鈕結束遊戲 ").GetComponent<Button>();
@@ -78,14 +80,13 @@ namespace MTaka
         private IEnumerator FadeCanvas() 
         {
             yield return new WaitForSeconds(1f);
-
             for (int i = 0; i < 10 ; i++)
             {
                 // 透明度遞增 0.1
                 groupFinal.alpha += 0.1f;
                 yield return new WaitForSeconds(0.05f);
             }
-
+            Time.timeScale = 0;
             // 畫布群組勾選互動 與 滑鼠射線遮擋
             groupFinal.interactable = true;
             groupFinal.blocksRaycasts = true;
@@ -93,12 +94,15 @@ namespace MTaka
 
         private void Replay()
         {
+            Time.timeScale = 1;
+
             //場景管理器，載入場景(當前啟動的場景名稱)
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         private void Quit()
         {
+            Time.timeScale = 1;
             //應用程式-離開 僅在執行檔有作用 (exe APK)
             Application.Quit();
         }

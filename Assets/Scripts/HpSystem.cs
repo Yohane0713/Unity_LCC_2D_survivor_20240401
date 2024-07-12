@@ -19,7 +19,7 @@ namespace MTaka
         public virtual void Damage(float damage)
         {
             // 如果血量 <= 0 就跳出
-            if (hp <= 0) return;
+            // if (hp <= 0) return;
 
             // 暫存傷害值物件 = 生成
             GameObject tempDamage = Instantiate(prefabDamageCanvas, transform.position, Quaternion.identity);

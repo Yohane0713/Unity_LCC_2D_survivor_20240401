@@ -96,8 +96,8 @@ namespace MTaka
 
         private void PlaySound()
         {
-            if (dataWeapon.name.Contains("飛刀")) SoundManager.instance.PlaySound(SoundType.Knife, 0.8f, 0.8f);
-            else if (dataWeapon.name.Contains("彈跳武器")) SoundManager.instance.PlaySound(SoundType.Bounce, 0.8f, 0.8f);
+            if (dataWeapon.name.Contains("飛刀")) SoundManager.instance.PlaySound(SoundType.Knife, 0.6f, 0.6f);
+            else if (dataWeapon.name.Contains("彈跳武器")) SoundManager.instance.PlaySound(SoundType.Bounce, 0.6f, 0.6f);
         }
 
         /// <summary>

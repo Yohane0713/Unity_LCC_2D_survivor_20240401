@@ -108,6 +108,6 @@ MonoBehaviour:
     - {x: -1, y: -1, z: 0}
     - {x: 1.5, y: -0.25, z: 0}
     - {x: -1.5, y: -0.25, z: 0}
-    weaponInterva: 0.3
+    weaponInterva: 0.6
     weaponSpeed: 1400
-    weaponAttack: 1200
+    weaponAttack: 1100

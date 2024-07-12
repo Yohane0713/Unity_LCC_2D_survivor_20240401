@@ -195,7 +195,7 @@ MonoBehaviour:
   - {x: -7.5, y: 6.8, z: 0}
   intervalLightBall: 0.3
   secondAttackTime: 3
-  attackLightBall: 2500
+  attackLightBall: 3000
   secondAttackProbability: 0.7
 --- !u!114 &5590509106855765057
 MonoBehaviour:

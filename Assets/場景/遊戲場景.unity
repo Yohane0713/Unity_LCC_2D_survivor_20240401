@@ -12021,7 +12021,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 132
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -26725,7 +26725,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 130
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -28765,7 +28765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2080961299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29695,6 +29695,10 @@ PrefabInstance:
     - target: {fileID: 6335566881204600848, guid: c93b018c97ba41b4ba4600416a0fd4a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381629423340875634, guid: c93b018c97ba41b4ba4600416a0fd4a4, type: 3}
+      propertyPath: Priority
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
